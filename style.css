@@ -1,0 +1,197 @@
+:root {
+    --title-family: 'Poppins', sans-serif;
+    --description-family: 'Nunito', sans-serif;
+    --option-family: 'Lato', sans-serif;
+    --border-color: #B9B9B9;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.main {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 40em;
+    justify-content: center;
+    align-items: baseline;
+    overflow: hidden;
+    padding-top: 7.5em;
+}
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/team-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(1.2);
+}
+.header {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    text-align: center;
+}
+.title {
+    margin: 0;
+    padding: 0;
+    font-family: var(--title-family);
+    font-weight: 600;
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: .5em;
+}
+.description {
+    font-family: var(--description-family);
+    font-size: 22px;
+    color: #fff;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 20em;
+    margin-bottom: -10em;
+}
+.form {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 3em 4em 3em 4em;
+    border-radius: 10px;
+}
+.name1, .name2, .email1, .age1 {
+    width: 50%;
+}
+.name1, .name2, .email1, .age1, .role1, .service1, .information1 {
+    margin-bottom: 1.25em;
+}
+label:not(.radio-option) {
+    margin-bottom: .5em;
+    font-family: var(--description-family);
+    font-weight: 600;
+    font-size: 14px;
+    color: #202020;
+}
+.role1, .service1, .message1, .information1 {
+    width: 100%;
+}
+.name1, .email1 {
+    float: left;
+    padding-right: 1em;
+}
+.name2, .age1 {
+    float: right;
+}
+label, textarea {
+    display: block;
+}
+input:not(.input-checkbox, .input-radio), select, textarea {
+    width: 100%;
+}
+input, textarea, select, .checkbox-option {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: .75em;
+    font-family: var(--option-family);
+    font-size: 13px;
+}
+.radio-option {
+    font-family: var(--option-family);
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: .5em;
+}
+.radio-option:last-child {
+    margin: 0;
+}
+.checkbox-option {
+    font-weight: normal;
+    font-size: 13px;
+}
+input.input-checkbox, input.input-radio {
+    margin-right: 1em;
+}
+textarea {
+    resize: none;
+}
+footer {
+    border-top: solid 1px #CCCCCC;
+    font-size: 12px;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+#submit {
+    padding: 0.75em 0 0.75em 0;
+    margin-top: 2em;
+    background-color: #5936E3;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--description-family);
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Media Queries for Tablet */
+@media screen and (max-width: 864px) {
+    .main {
+        height: 25em;
+        align-items: baseline;
+        padding-top: 5em;
+    }
+    .content {
+        bottom: 10em;
+        width: 75%;
+        margin: auto;
+    }
+    span {
+        margin-right: .5em;
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for Phone */
+@media screen and (max-width: 600px) {
+    .main {
+        padding-top: 4em;
+    }
+    .header {
+        max-width: 275px;
+    }
+    .header h1 {
+        font-size: 1.75em;
+    }
+    .header p {
+        font-size: 1em;
+    }
+    .content {
+        width: 85%;
+        bottom: 12em;
+        margin-bottom: -5em;
+    }
+    .form {
+        padding: 2em 1.5em 2em 1.5em;
+    }
+    .name1, .name2, .email1, .age1 {
+        width: 100%;
+    }
+    .name1, .email1 {
+        padding: 0;
+    }
+    .name1, .name2, .email1, .age1, .role1, .service1, .message1 {
+        margin-bottom: 1em;
+    }
+}
